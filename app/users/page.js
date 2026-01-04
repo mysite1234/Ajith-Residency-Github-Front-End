@@ -1,36 +1,8 @@
 'use client'
 import MainLayout from '@/components/templates/MainLayout';
-import Text from '@/components/atoms/Text';
-import Card, { CardHeader, CardContent } from '@/components/molecules/Card';
-import UserProfile from '@/components/molecules/UserProfile';
-import AntdModalView from '@/components/molecules/ModalView';
-import { Button } from "antd";
-import { useState } from 'react';
 import CustomTable from '@/components/molecules/CustomTable';
 
-const users = [
-  {
-    name: 'Sarah Johnson',
-    email: 'sarah@example.com',
-    avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150',
-    role: 'Admin',
-    status: 'Active',
-  },
-  {
-    name: 'Mike Chen',
-    email: 'mike@example.com',
-    avatar: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=150',
-    role: 'User',
-    status: 'Active',
-  },
-  {
-    name: 'Emily Davis',
-    email: 'emily@example.com',
-    avatar: 'https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=150',
-    role: 'Editor',
-    status: 'Inactive',
-  },
-];
+
 
 export default function UsersPage() {
   const users = [
