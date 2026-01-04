@@ -70,7 +70,6 @@ export default function UsersPage() {
 
   const handleRowClick = (user) => {
     console.log('User clicked:', user);
-    // Or navigate to user detail page
     // router.push(`/users/${user.id}`);
   };
 
