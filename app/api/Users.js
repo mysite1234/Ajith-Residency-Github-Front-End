@@ -11,7 +11,7 @@ export const registerUser = async (payload) => {
 };
 
 /**
- * POST login user
+ * POST login userr
  */
 export const loginUser = async (payload) => {
   return await apiRequest("/api/users/login", {
