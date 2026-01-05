@@ -51,6 +51,16 @@ export default function AuthPage() {
     };
   }, [timer]);
 
+  // Reset OTP mode when switching between login/register
+  useEffect(() => {
+    if (!isLogin && useOTP) {
+      setUseOTP(false);
+      setForm(p => ({ ...p, otp: "" }));
+      setOtpSent(false);
+      stopTimer();
+    }
+  }, [isLogin]);
+
   // Function to stop timer
   const stopTimer = () => {
     if (timerRef.current) {
@@ -262,17 +272,9 @@ export default function AuthPage() {
           toast.success(
             <div>
               <div className="font-semibold">Registration Successful!</div>
-              <div className="text-sm opacity-90">
-                Account created for: {form.email}
-              </div>
-              <div className="text-xs opacity-80 mt-1">
-                Please login with your credentials
-              </div>
+              
             </div>, 
-            { 
-              duration: 2000,
-              icon: '✅'
-            }
+          
           );
           
           // Clear form, stop timer, and switch to login mode after 2 seconds
@@ -313,7 +315,7 @@ export default function AuthPage() {
   const toggleMode = () => {
     setIsLogin(!isLogin);
     setForm({ email: "", password: "", confirmPassword: "", otp: "" });
-    setUseOTP(false);
+    setUseOTP(false); // Reset OTP mode
     setOtpSent(false);
     stopTimer(); // Stop timer when switching modes
   };
