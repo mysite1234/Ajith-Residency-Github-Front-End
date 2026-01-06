@@ -516,13 +516,7 @@ export default function AuthPage() {
                 </>
               )}
 
-              {isLogin && !useOTP && (
-                <div className="flex justify-end">
-                  <button type="button" className="text-xs text-indigo-600 hover:text-indigo-800 transition-colors">
-                    Forgot password?
-                  </button>
-                </div>
-              )}
+             
 
               <button
                 type="submit"
