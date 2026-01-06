@@ -36,9 +36,7 @@ export default function Header({ onMenuClick, user }) {
             <Icon icon={Menu} size={20} />
           </Button>
 
-          <Text variant="h4" as="h1" className="text-gray-900">
-            Dashboard
-          </Text>
+         
         </div>
 
         <div className="hidden md:block flex-1 max-w-md mx-8">
